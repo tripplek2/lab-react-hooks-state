@@ -9,19 +9,18 @@ export const sampleProducts = [
 
 const ProductList = ({ category, onAddToCart }) => {
   const filteredProducts = 
-    ? sampleProducts
-    ? sampleProducts.filter((product=> product.category === category);
-}
+    category === "all"
+    ? sampleProducts : sampleProducts.filter((product)> product.category === category);
+
   return (
     <div>
       <h2>Available Products</h2>
 
-      {/* TODO: Filter sample data using selected category */}
-      {sampleProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {filteredProducts.map((product) => (
+        <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
       ))}
     </div>
   )
 }
 
-export default ProductList
+export default ProductList;

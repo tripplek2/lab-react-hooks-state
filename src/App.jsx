@@ -4,7 +4,7 @@ import DarkModeToggle from './components/DarkModeToggle'
 import Cart from './components/Cart'
 
 const App = () => {
-  const [darkmode, setDarkMode] = useState(false); 
+  const [darkMode, setDarkMode] = useState(false); 
   const [cart, setCart] = useState([]);
   const [category, setCategory] = useState("all");
 

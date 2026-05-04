@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const DarkModeToggle = ({ darkmode, toggle}) => {
+const DarkModeToggle = () => {
+const [darkmode, setDarkMode] =useState(false);
+
+const toggle = () => {
+  setDarkMode(prev => !prev);
+};
  
   return (
     <button onClick={toggle}> 

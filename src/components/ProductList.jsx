@@ -10,7 +10,11 @@ export const sampleProducts = [
 const ProductList = ({ category, onAddToCart }) => {
   const filteredProducts = 
     category === "all"
-    ? sampleProducts : sampleProducts.filter((product)> product.category === category);
+    ? sampleProducts : sampleProducts.filter((product) =>product.category === category);
+
+  if (filteredProducts.length === 0) {
+    return <p>No products available</p>
+  }
 
   return (
     <div>

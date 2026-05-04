@@ -29,17 +29,20 @@ const App = () => {
         toggle={handleToggleDarkMode}
       />
 
-      {/* TODO: Implement category filter dropdown */}
+      
       <label>Filter by Category: </label>
-      <select>
+      <select onChange={(e) => setCategory(e.target.value)}>
         <option value="all">All</option>
         <option value="Fruits">Fruits</option>
         <option value="Dairy">Dairy</option>
       </select>
 
-      <ProductList />
+      <ProductList 
+       onAddToCart={handleAddToCart}
+       category={category}
+      />
 
-      {/* TODO: Implement and render Cart component */}
+      <Cart cart={cart} />
     </div>
   )
 }

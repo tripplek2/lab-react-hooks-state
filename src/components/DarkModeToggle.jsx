@@ -8,4 +8,4 @@ const DarkModeToggle = ({ darkmode, toggle}) => {
 
     </button> )}
 
-export default DarkModeToggle
+export default DarkModeToggle;
